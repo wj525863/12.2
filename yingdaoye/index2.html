@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+		<style>
+			body,html{
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			p{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				color: #99A0FC;
+				font-size: 0.4rem;
+				font-family: "微软雅黑";
+			}
+			.box{
+				width: 100%
+				background: #eee;
+				position: relative;
+			}
+			.box .world{
+				width: 7.5rem;
+				height: 1.7rem;
+				text-align: center;
+				position: absolute;
+				top: 0.5rem;
+				margin-top: 1rem;
+				overflow: hidden;
+			}
+			.box .world span{
+				font-size: 0.5rem;
+				/*line-height: 3.5rem;*/
+				color: #99a0fc;
+				font-family: "微软雅黑";
+			}
+			.box .phone{
+				width: 3.7rem;
+				height: 8rem;
+				margin: 0 auto;
+				position: absolute;
+				left: 1.9rem;
+				top: 3.5rem;
+			}
+			.box .phone img{
+				width: 100%;
+				overflow: hidden;
+			}
+			.box .fangda{
+				width: 6.0rem;
+				height: 2rem;
+				position: absolute;
+				top: 6.7rem;
+				left: 0.9rem;
+			}
+			.box .fangda img{
+				width: 100%;
+			}
+			.box .bolang{
+				width: 7.5rem;
+				height: 3.5rem;
+				position: absolute;
+				top: 9rem;
+				left: -0.5rem;
+				overflow: hidden;
+			}
+			.box .bolang img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="world">
+				<span>下载</span><br>
+				<p>随时看随时听</p>
+			</div>
+			<div class="phone">
+				<img src="img/phone2.png" alt="" />
+			</div>
+			<div class="fangda">
+				<img src="img/fangda2.png" alt="" />
+			</div>
+			<div class="bolang">
+				<img src="img/bolang.png" alt="" />
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		function resize(originSize,type){
+			var type=type||"x";
+			if(type=="x"){
+				var widths=document.documentElement.clientWidth;
+				var scale=widths/originSize*100+"px";
+
+			}else if(type=="y"){
+				var heights=document.documentElement.clientHeight;
+				var scale=heights/originSize*100+"px";
+			}
+			document.getElementsByTagName("html")[0].style.fontSize=scale;
+		}
+		window.onload=function(){
+			resize(750,"x");
+		}
+	</script>
+</html>
